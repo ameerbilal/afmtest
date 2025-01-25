@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema History | AFM Present</title>
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="video.js">
+    <link rel="icon" href="AFM-24.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back" />    
+</head>
+
+
+<body>
+    
+    <header>
+
+        <a href="#"><img src="Logo.png" class="logo"></a>
+
+        <ul style="color: aliceblue;">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Shows</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
+
+        </ul>
+
+        <div class="nav-left-bar">
+            <a href="index.html"><span class="material-symbols-outlined">
+                arrow_back
+                </span></a>
+                <h2 class="go-back">Go Back</h2>
+        </div>
+
+    </header>
+
+    <div class="content">
+
+        <div class="c-left">
+            <img src="Cover.png" class="Cover">
+            <h1 class="h1-left">Cinema History
+                تاريخ السينما
+            </h1>
+<a href="Trailer.mp4">
+            <button class="watch-trailer">Watch Trailer</button>
+        </a>
+    </div>
+    
+    <div class="container">
+        <label for="series">choose The Episode</label>
+        <select id="series">
+            <option value="">Choose...</option>
+            <option value="01.mp4">Episode 1 Cinema History</option>
+            <option value="02.mp4">Episode 2 Cinema History</option>
+            <option value="03.mp4">Episode 3 Cinema History</option>
+            <option value="04.mp4">Episode 4 Cinema History</option>
+            <option value="05.mp4">Episode 5 Cinema History</option>
+            <option value="06.mp4">Episode 6 Cinema History</option>
+        </select>
+        <button onclick="playVideo()">Watch!</button>
+        <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+    </div>
+
+
+        <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+    <script>
+        function playVideo() {
+            const videoPlayer = document.getElementById('videoPlayer');
+            const selectedOption = document.getElementById('series').value;
+
+            if (selectedOption) {
+                videoPlayer.src = selectedOption;
+            } else {
+                alert("يرجى اختيار فيلم أو مسلسل لمشاهدته!");
+            }
+        }
+    </script>
+</body>
+</html>
